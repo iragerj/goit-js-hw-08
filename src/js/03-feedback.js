@@ -11,6 +11,8 @@ const saveData = throttle(data => {
 form.addEventListener('input', onFormInput);
 form.addEventListener('submit', onFormSubmit);
 
+onPageLoad();
+
 function onFormInput(event) {
   event.preventDefault();
 
@@ -30,8 +32,6 @@ function onPageLoad(form) {
     textarea.value = parsedFormValue.message;
   }
 }
-
-onPageLoad();
 
 function onFormSubmit(event) {
   event.preventDefault();
